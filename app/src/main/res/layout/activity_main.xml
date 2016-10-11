@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sgb.mylibrary.FloatTabScrollView
+        android:id="@+id/floattabscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bottom_layout="@layout/layout_bottom"
+        app:page1_layout="@layout/layout_page1"
+        app:page2_layout="@layout/layout_page2"
+        app:page3_layout="@layout/layout_page3"
+        app:tab1_title="商品详情"
+        app:tab2_title="商品介绍"
+        app:tab3_title="商品推荐"
+        app:tabline_color="@android:color/black"
+        app:top_layout="@layout/layout_top" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="订单详情" />
+
+    </android.support.design.widget.AppBarLayout>
+
+</RelativeLayout>

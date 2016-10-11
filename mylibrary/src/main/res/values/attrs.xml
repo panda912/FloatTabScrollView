@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FloatTabScrollView">
+        <attr name="top_layout" format="reference" />
+        <attr name="page1_layout" format="reference" />
+        <attr name="page2_layout" format="reference" />
+        <attr name="page3_layout" format="reference" />
+        <attr name="bottom_layout" format="reference" />
+        <attr name="tab1_title" format="string" />
+        <attr name="tab2_title" format="string" />
+        <attr name="tab3_title" format="string" />
+        <attr name="tabline_color" format="color" />
+    </declare-styleable>
+
+</resources>
