@@ -5,4 +5,11 @@
     android:background="@android:color/holo_orange_dark"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="page2"
+        android:textSize="16dp" />
+
 </LinearLayout>

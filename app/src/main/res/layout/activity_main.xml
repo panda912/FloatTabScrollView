@@ -13,11 +13,12 @@
         app:page1_layout="@layout/layout_page1"
         app:page2_layout="@layout/layout_page2"
         app:page3_layout="@layout/layout_page3"
-        app:tab1_title="商品详情"
-        app:tab2_title="商品介绍"
-        app:tab3_title="商品推荐"
-        app:tabline_color="@android:color/black"
-        app:top_layout="@layout/layout_top" />
+        app:selected_tab_color="@android:color/holo_orange_dark"
+        app:tab1_title="page1"
+        app:tab2_title="page2"
+        app:tab3_title="page3"
+        app:top_layout="@layout/layout_top"
+        app:unselected_tab_color="@android:color/black" />
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"

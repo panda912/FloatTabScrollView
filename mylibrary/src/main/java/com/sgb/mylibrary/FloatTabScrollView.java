@@ -42,7 +42,8 @@ public class FloatTabScrollView extends NestedScrollView implements View.OnClick
     private int mPage3LayoutId;
     private int mBottomLayoutId;
 
-    private int tabLineColor;
+    private int mSelectedTabColor;
+    private int mUnselectedTabColor;
 
     //
     private FrameLayout mTopContainerFL;
@@ -99,8 +100,11 @@ public class FloatTabScrollView extends NestedScrollView implements View.OnClick
             if (ta.hasValue(R.styleable.FloatTabScrollView_bottom_layout)) {
                 mBottomLayoutId = ta.getResourceId(R.styleable.FloatTabScrollView_bottom_layout, 0);
             }
-            if (ta.hasValue(R.styleable.FloatTabScrollView_tabline_color)) {
-                tabLineColor = ta.getColor(R.styleable.FloatTabScrollView_tabline_color, 0xFFFF4081);
+            if (ta.hasValue(R.styleable.FloatTabScrollView_selected_tab_color)) {
+                mSelectedTabColor = ta.getColor(R.styleable.FloatTabScrollView_selected_tab_color, 0xFFFF4081);
+            }
+            if (ta.hasValue(R.styleable.FloatTabScrollView_unselected_tab_color)) {
+                mUnselectedTabColor = ta.getColor(R.styleable.FloatTabScrollView_unselected_tab_color, 0xFF000000);
             }
 
             ta.recycle();
@@ -127,7 +131,7 @@ public class FloatTabScrollView extends NestedScrollView implements View.OnClick
         mTabHolderView = findViewById(R.id.view_tab_holder);
         mTabLL = (LinearLayout) findViewById(R.id.ll_tab);
         mTabLine = findViewById(R.id.view_tab_line);
-        mTabLine.setBackgroundColor(tabLineColor);
+        mTabLine.setBackgroundColor(mSelectedTabColor);
 
         mTabTV1 = (TextView) findViewById(R.id.tv_tab1);
         mTabTV2 = (TextView) findViewById(R.id.tv_tab2);
@@ -205,12 +209,21 @@ public class FloatTabScrollView extends NestedScrollView implements View.OnClick
         switch (index) {
             case 0:
                 needTabLineX = 0;
+                mTabTV1.setTextColor(mSelectedTabColor);
+                mTabTV2.setTextColor(mUnselectedTabColor);
+                mTabTV3.setTextColor(mUnselectedTabColor);
                 break;
             case 1:
                 needTabLineX = mTabLL.getWidth() / 3;
+                mTabTV1.setTextColor(mUnselectedTabColor);
+                mTabTV2.setTextColor(mSelectedTabColor);
+                mTabTV3.setTextColor(mUnselectedTabColor);
                 break;
             case 2:
                 needTabLineX = mTabLL.getWidth() / 3 * 2;
+                mTabTV1.setTextColor(mUnselectedTabColor);
+                mTabTV2.setTextColor(mUnselectedTabColor);
+                mTabTV3.setTextColor(mSelectedTabColor);
                 break;
             default:
                 break;

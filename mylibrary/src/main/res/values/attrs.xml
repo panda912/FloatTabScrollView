@@ -10,7 +10,8 @@
         <attr name="tab1_title" format="string" />
         <attr name="tab2_title" format="string" />
         <attr name="tab3_title" format="string" />
-        <attr name="tabline_color" format="color" />
+        <attr name="selected_tab_color" format="color" />
+        <attr name="unselected_tab_color" format="color" />
     </declare-styleable>
 
 </resources>
